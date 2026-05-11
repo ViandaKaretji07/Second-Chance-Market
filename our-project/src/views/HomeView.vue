@@ -1,0 +1,17 @@
+<template>
+  <Navbar />
+  <HeroSection />
+  <FeaturesSection />
+  <HowItWorks />
+  <Testimoni />
+  <Footer />
+</template>
+
+<script setup>
+import Navbar from '../components/Navbar.vue'
+import HeroSection from '../components/HeroSection.vue'
+import FeaturesSection from '../components/FeaturesSection.vue'
+import HowItWorks from '../components/HowItWorks.vue'
+import Testimoni from '../components/Testimoni.vue'
+import Footer from '../components/Footer.vue'
+</script>
