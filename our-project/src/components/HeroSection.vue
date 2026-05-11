@@ -1,9 +1,8 @@
 <template>
-  <section class="hero">
-    <div class="hero-left">
+  <div class="hero">
+    <div class="hero-left animate-left">
       <div class="typing-badge">
-        <i class="fas fa-graduation-cap"></i>
-        Marketplace Kampus #1
+        <i class="fas fa-graduation-cap"></i> Marketplace Kampus #1
       </div>
 
       <h1>
@@ -13,121 +12,52 @@
       </h1>
 
       <p>
-        Second Chance Market membantu mahasiswa menjual dan membeli barang bekas dengan mudah.
+        ✨ Second Chance Market: wujudkan ekonomi sirkular kampus.
+        Dari anak kos untuk anak kos, dengan fitur titip jual pulang
+        kampung, bundling hemat, dan chat langsung.
       </p>
 
       <div class="cta-group">
-        <button class="btn-primary" @click="explore">
-          Mulai Jelajahi
+        <button class="btn-primary-landing" @click="goToMarket">
+          <i class="fas fa-rocket"></i> Mulai Jelajahi
         </button>
 
-        <button class="btn-outline" @click="demo">
-          Lihat Demo
+        <button class="btn-outline-landing" @click="showDemo">
+          <i class="fas fa-play-circle"></i> Lihat Demo
         </button>
       </div>
     </div>
 
-    <div class="hero-right">
-      <img
-        src="https://placehold.co/500x400/e0f0ea/2c7a5e?text=Second+Chance+Market"
-        alt=""
-      >
+    <div class="hero-right animate-up">
+      <div style="background: #bdd9cf; border-radius: 48px; padding: 12px;">
+        <img
+          src="https://placehold.co/500x400/e0f0ea/2c7a5e?text=Second+Chance+Market"
+          alt="Marketplace Preview"
+          style="border-radius: 40px; width:100%; height: auto;"
+        >
+      </div>
     </div>
-  </section>
+  </div>
 </template>
 
-<script setup>
-const explore = () => {
-  alert("Mulai Jelajahi Marketplace")
-}
+<script>
+export default {
+  name: 'HeroSection',
 
-const demo = () => {
-  alert("Demo Marketplace")
+  methods: {
+    goToMarket() {
+      alert(
+        "✨ Menuju ke Marketplace Second Chance Market ✨\n(Dalam implementasi nyata, ini akan membuka halaman utama marketplace dengan semua fitur: Posting, Chat, Wishlist, Bundling, Titip Jual)"
+      )
+
+      window.open("#", "_self")
+    },
+
+    showDemo() {
+      alert(
+        "🎥 Demo Fitur:\n- Post barang dengan foto emoji\n- Chat realtime antar user\n- Wishlist & Titip jual\n- Bundling barang kos.\nSilakan buka marketplace untuk mencoba langsung."
+      )
+    }
+  }
 }
 </script>
-
-<style scoped>
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 8%;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.hero-left {
-  flex: 1;
-}
-
-.hero-left h1 {
-  font-size: 3rem;
-  color: #164c3b;
-  margin: 20px 0;
-}
-
-.highlight {
-  color: #2c9b7a;
-}
-
-.hero-left p {
-  color: #3e6b5d;
-  margin-bottom: 30px;
-}
-
-.hero-right {
-  flex: 1;
-  text-align: center;
-}
-
-.hero-right img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 30px;
-}
-
-.typing-badge {
-  display: inline-block;
-  background: #daf4ec;
-  padding: 6px 14px;
-  border-radius: 30px;
-}
-
-.cta-group {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.btn-primary {
-  background: #1e6f5c;
-  color: white;
-  border: none;
-  padding: 14px 30px;
-  border-radius: 40px;
-  cursor: pointer;
-}
-
-.btn-outline {
-  border: 2px solid #1e6f5c;
-  background: transparent;
-  padding: 14px 30px;
-  border-radius: 40px;
-  cursor: pointer;
-}
-
-@media(max-width:768px){
-  .hero{
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  .hero-left h1{
-    font-size: 2rem;
-  }
-
-  .cta-group{
-    justify-content: center;
-  }
-}
-</style>

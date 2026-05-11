@@ -1,28 +1,19 @@
 <template>
   <footer>
     <p>
-      Second Chance Market — Edukasi Marketplace Mahasiswa
+      <i class="fas fa-graduation-cap"></i>
+      Second Chance Market — Edukasi Marketplace untuk Mahasiswa Indonesia
     </p>
 
-    <p class="copy">
-      © 2025 Informatika
+    <p style="margin-top: 12px;">
+      🌱 Hijau, kolaboratif, dan hemat |
+      &copy; 2025 Simulasi Pembelajaran Informatika
     </p>
   </footer>
 </template>
 
-<script setup>
-
+<script>
+export default {
+  name: 'Footer'
+}
 </script>
-
-<style scoped>
-footer {
-  background: #154c3d;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.copy {
-  margin-top: 10px;
-}
-</style>

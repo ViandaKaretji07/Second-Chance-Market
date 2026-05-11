@@ -1,85 +1,114 @@
 <template>
-  <section class="features" id="fitur">
-    <h2 class="section-title">
+  <div class="features" id="fitur">
+    <div class="section-title">
+      <i class="fas fa-star-of-life"></i>
       Fitur Andalan untuk Mahasiswa
-    </h2>
+    </div>
 
     <div class="feature-grid">
-      <div
-        class="feature-card"
-        v-for="feature in features"
-        :key="feature.title"
-      >
+
+      <div class="feature-card">
         <div class="feature-icon">
-          <i :class="feature.icon"></i>
+          <i class="fas fa-box-open"></i>
         </div>
 
-        <h3>{{ feature.title }}</h3>
-        <p>{{ feature.desc }}</p>
+        <h3>Post Barang + Kategori</h3>
+
+        <p>
+          Upload foto, deskripsi, harga, dan pilih kategori
+          (Elektronik, Furnitur, Buku, dll).
+        </p>
       </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-comment-dots"></i>
+        </div>
+
+        <h3>Chat Penjual & Pembeli</h3>
+
+        <p>
+          Komunikasi langsung, nego harga,
+          tanya kondisi barang secara realtime.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+
+        <h3>Wishlist & Simpan Barang</h3>
+
+        <p>
+          Simpan barang incaran, akses kapan saja,
+          dan bandingkan harga.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-plane-departure"></i>
+        </div>
+
+        <h3>Titip Jual Saat Pulang</h3>
+
+        <p>
+          Jadwalkan penjualan barang sebelum mudik,
+          buyer bisa pre-order!
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-cubes"></i>
+        </div>
+
+        <h3>Bundling "Paket Anak Kos"</h3>
+
+        <p>
+          Beli kasur + meja + lampu jadi satu paket,
+          lebih murah & praktis.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+
+        <h3>Simulasi Marketplace</h3>
+
+        <p>
+          Platform pembelajaran interaktif
+          untuk memahami alur jual beli digital.
+        </p>
+      </div>
+
     </div>
-  </section>
+  </div>
 </template>
 
-<script setup>
-const features = [
-  {
-    icon: 'fas fa-box-open',
-    title: 'Post Barang',
-    desc: 'Upload barang dengan mudah'
-  },
-  {
-    icon: 'fas fa-comment-dots',
-    title: 'Chat Realtime',
-    desc: 'Komunikasi penjual dan pembeli'
-  },
-  {
-    icon: 'fas fa-heart',
-    title: 'Wishlist',
-    desc: 'Simpan barang favorit'
-  },
-  {
-    icon: 'fas fa-plane-departure',
-    title: 'Titip Jual',
-    desc: 'Jual barang saat mudik'
+<script>
+export default {
+  name: 'FeaturesSection',
+
+  mounted() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.style.opacity = "1"
+          entry.target.style.transform = "translateY(0)"
+        }
+      })
+    }, { threshold: 0.1 })
+
+    document.querySelectorAll('.feature-card').forEach(el => {
+      el.style.opacity = "0"
+      el.style.transform = "translateY(20px)"
+      el.style.transition = "0.5s ease-out"
+      observer.observe(el)
+    })
   }
-]
+}
 </script>
-
-<style scoped>
-.features {
-  background: white;
-  padding: 60px 8%;
-  border-radius: 50px 50px 0 0;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 40px;
-  color: #164c3b;
-}
-
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 30px;
-}
-
-.feature-card {
-  background: #f9fffc;
-  padding: 30px;
-  border-radius: 30px;
-  text-align: center;
-  transition: 0.3s;
-}
-
-.feature-card:hover {
-  transform: translateY(-10px);
-}
-
-.feature-icon {
-  font-size: 3rem;
-  color: #1e6f5c;
-  margin-bottom: 20px;
-}
-</style>
