@@ -1,7 +1,7 @@
 <template>
   <div class="features" id="fitur">
     <div class="section-title">
-      Fitur Andalan untuk Mahasiswa
+      Fitur Andalan untuk Warga
     </div>
 
     <div class="feature-grid">
