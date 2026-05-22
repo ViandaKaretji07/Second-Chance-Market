@@ -1,7 +1,6 @@
 <template>
   <div class="how-it-works" id="cara-kerja">
     <div class="section-title">
-      <i class="fas fa-sync-alt"></i>
       Cara Kerja Second Chance Market
     </div>
 
@@ -10,7 +9,7 @@
       <div class="step">
         <div class="step-number">1</div>
 
-        <h3>📦 Posting Barang</h3>
+        <h3>Posting Barang</h3>
 
         <p>
           Upload barang bekasmu lengkap dengan
@@ -21,7 +20,7 @@
       <div class="step">
         <div class="step-number">2</div>
 
-        <h3>💬 Negosiasi & Chat</h3>
+        <h3>Negosiasi & Chat</h3>
 
         <p>
           Pembeli menghubungi via chat internal
@@ -32,7 +31,7 @@
       <div class="step">
         <div class="step-number">3</div>
 
-        <h3>✅ Transaksi Aman</h3>
+        <h3>Transaksi Aman</h3>
 
         <p>
           Kesepakatan harga,
@@ -43,7 +42,7 @@
       <div class="step">
         <div class="step-number">4</div>
 
-        <h3>🌟 Beri Rating</h3>
+        <h3>Beri Rating</h3>
 
         <p>
           Bangun reputasi sebagai penjual terpercaya

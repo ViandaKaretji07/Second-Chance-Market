@@ -2,7 +2,12 @@
   <div class="hero">
     <div class="hero-left animate-left">
       <div class="typing-badge">
-        <i class="fas fa-graduation-cap"></i> Marketplace Kampus #1
+         <img 
+        src="@/assets/image/logo.png" 
+        alt="Logo" 
+        style="width: 15px; height: 15px;"
+      />
+        Marketplace Kampus #1
       </div>
 
       <h1>
@@ -12,18 +17,18 @@
       </h1>
 
       <p>
-        ✨ Second Chance Market: wujudkan ekonomi sirkular kampus.
+        Second Chance Market: wujudkan ekonomi sirkular kampus.
         Dari anak kos untuk anak kos, dengan fitur titip jual pulang
         kampung, bundling hemat, dan chat langsung.
       </p>
 
       <div class="cta-group">
         <button class="btn-primary-landing" @click="goToMarket">
-          <i class="fas fa-rocket"></i> Mulai Jelajahi
+          Mulai Jelajahi
         </button>
 
         <button class="btn-outline-landing" @click="showDemo">
-          <i class="fas fa-play-circle"></i> Lihat Demo
+          Lihat Demo
         </button>
       </div>
     </div>

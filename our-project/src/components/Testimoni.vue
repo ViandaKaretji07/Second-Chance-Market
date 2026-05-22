@@ -1,7 +1,6 @@
 <template>
   <div class="testimoni">
     <div class="section-title">
-      <i class="fas fa-quote-left"></i>
       Apa Kata Mereka?
     </div>
 
@@ -23,7 +22,11 @@
 
     <div style="margin-top: 35px; text-align:center;">
       <button class="btn-primary-landing" @click="goToMarket">
-        <i class="fas fa-arrow-right"></i>
+         <img 
+        src="@/assets/image/logo.png" 
+        alt="Logo" 
+        style="width: 15px; height: 15px;"
+      />
         Coba Sekarang — Buka Marketplace
       </button>
     </div>

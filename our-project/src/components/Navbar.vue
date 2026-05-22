@@ -1,7 +1,12 @@
 <template>
   <div class="navbar">
     <div class="logo">
-      <i class="fas fa-leaf"></i> Second Chance Market
+       <img 
+        src="@/assets/image/logo.png" 
+        alt="Logo" 
+        style="width: 28px; height: 28px;"
+      />
+      Second Chance Market
     </div>
 
     <div class="nav-links">
@@ -10,7 +15,12 @@
       <a href="#cara-kerja">Panduan</a>
 
       <a href="#" @click.prevent="goToMarket" class="btn-masuk">
-        <i class="fas fa-store"></i> Masuk Marketplace
+         <img 
+        src="@/assets/image/logo.png" 
+        alt="Logo" 
+        style="width: 15px; height: 15px;"
+      />
+        Masuk Marketplace
       </a>
     </div>
   </div>

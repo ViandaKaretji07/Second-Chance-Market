@@ -1,7 +1,11 @@
 <template>
   <footer>
-    <p>
-      <i class="fas fa-graduation-cap"></i>
+    <p style="align-items: center; gap: 8px; margin: 0;">
+      <img 
+        src="@/assets/image/logo.png" 
+        alt="Logo" 
+        style="width: 15px; height: 15px;"
+      />
       Second Chance Market — Edukasi Marketplace untuk Mahasiswa Indonesia
     </p>
 

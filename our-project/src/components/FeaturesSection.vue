@@ -1,7 +1,6 @@
 <template>
   <div class="features" id="fitur">
     <div class="section-title">
-      <i class="fas fa-star-of-life"></i>
       Fitur Andalan untuk Mahasiswa
     </div>
 
