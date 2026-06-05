@@ -1,7 +1,7 @@
 <template>
   <div class="features" id="fitur">
     <div class="section-title">
-      Fitur Andalan untuk Mahasiswa
+      Fitur Andalan untuk Warga
     </div>
       <div style="text-align: center; max-width: 800px; margin: -20px auto 40px auto; background: #eef5f2; padding: 18px 24px; border-radius: 48px;">
         <strong style="color: #164c3b;">Tak perlu repot pindahan atau bingung menjual barang saat pulang kampung.</strong> 
