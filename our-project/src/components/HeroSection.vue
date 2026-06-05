@@ -10,17 +10,9 @@
         Marketplace Kampus #1
       </div>
 
-      <h1>
-        Jual & Beli
-        <span class="highlight">Barang Bekas Mahasiswa</span>
-        Lebih Cerdas
-      </h1>
-
-      <p>
-        Second Chance Market: wujudkan ekonomi sirkular kampus.
-        Dari anak kos untuk anak kos, dengan fitur titip jual pulang
-        kampung, bundling hemat, dan chat langsung.
-      </p>
+      <h1>"Barang bekasmu bukan sekadar sisa, tapi <span class="highlight">peluang baru!</span>"</h1>
+        <!-- INTEREST (I) dimasukkan di sini sebagai sub-pesan yang kuat -->
+        <p><span class="highlight-interest"> Bayangkan betapa mudahnya menjual atau membeli barang bekas yang masih layak pakai, khususnya bagi mahasiswa rantau.</span> Dengan Second Chance Market, kamu bisa menemukan meja belajar, kasur, hingga peralatan dapur dengan harga ramah kantong, langsung dari sesama mahasiswa.</p>
 
       <div class="cta-group">
         <button class="btn-primary-landing" @click="goToMarket">

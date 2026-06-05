@@ -4,6 +4,7 @@
   <FeaturesSection />
   <HowItWorks />
   <Testimoni />
+  <Action />
   <Footer />
 </template>
 
@@ -13,6 +14,7 @@ import HeroSection from '../components/HeroSection.vue'
 import FeaturesSection from '../components/FeaturesSection.vue'
 import HowItWorks from '../components/HowItWorks.vue'
 import Testimoni from '../components/Testimoni.vue'
+import Action from '../components/Action.vue'
 import Footer from '../components/Footer.vue'
 
 export default {
@@ -22,6 +24,7 @@ export default {
     FeaturesSection,
     HowItWorks,
     Testimoni,
+    Action,
     Footer
   }
 }

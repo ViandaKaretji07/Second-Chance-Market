@@ -30,7 +30,9 @@
         Coba Sekarang — Buka Marketplace
       </button>
     </div>
+    
   </div>
+  
 </template>
 
 <script>

@@ -3,14 +3,17 @@
     <div class="section-title">
       Fitur Andalan untuk Mahasiswa
     </div>
-
+      <div style="text-align: center; max-width: 800px; margin: -20px auto 40px auto; background: #eef5f2; padding: 18px 24px; border-radius: 48px;">
+        <strong style="color: #164c3b;">Tak perlu repot pindahan atau bingung menjual barang saat pulang kampung.</strong> 
+        Fitur unggulan <strong class="highlight">Titip Jual Saat Pulang</strong> dan sistem <strong>Pre-Order</strong> membuat proses jual-beli jadi lebih praktis, aman, dan sesuai kebutuhan mahasiswa. Hemat biaya, hemat waktu, sekaligus mendukung gaya hidup berkelanjutan.
+    </div>
     <div class="feature-grid">
 
       <div class="feature-card">
         <div class="feature-icon">
           <i class="fas fa-box-open"></i>
         </div>
-
+        
         <h3>Post Barang + Kategori</h3>
 
         <p>
