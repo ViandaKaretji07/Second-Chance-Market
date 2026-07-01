@@ -10,10 +10,12 @@
     --primary-color: #1e6f5c;
     --primary-hover: #0f5444;
     --secondary-color: #3ca17e;
-    --accent-color: #2c9b7a;
-    --text-main: #164c3b;
-    --text-muted: #3e6b5d;
-    --bg-gradient: linear-gradient(135deg, #f0fbf7 0%, #e0f0ea 100%);
+    --accent-color: #e2d8d8;
+    --text-main: #ffffff;
+    --text-muted: #ffffff;
+    --text-mains: #164c3b;
+    --text-muteds: #3e6b5d;
+    --bg-gradient: hsla(143.04,66.14%,37.06%,1);
     --white-alpha: rgba(255, 255, 255, 0.95);
     --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
     --transition: 0.3s ease;
@@ -33,7 +35,7 @@ html {
 body {
     background: var(--bg-gradient);
     overflow-x: hidden;
-    color: var(--text-main);
+    color: var(--text-mains);
 }
 
 /* 
@@ -159,6 +161,7 @@ body {
     font-size: 3.2rem;
     line-height: 1.2;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 .hero-left .highlight {
@@ -202,7 +205,7 @@ body {
 .btn-outline-landing {
     background: transparent;
     border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    color: white;
 }
 
 .btn-outline-landing:hover {
@@ -213,14 +216,12 @@ body {
 .hero-right {
     flex: 1;
     text-align: center;
-    animation: pulseGlow 2.5s infinite;
 }
 
 .hero-right img {
     max-width: 100%;
     height: auto;
     border-radius: 50px;
-    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* 
@@ -279,7 +280,7 @@ body {
 */
 .how-it-works {
     padding: 60px 8%;
-    background: #eef5f2;
+    background: hsla(143.04,66.14%,37.06%,1);
 }
 
 .steps {

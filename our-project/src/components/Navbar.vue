@@ -1,11 +1,11 @@
 <template>
   <div class="navbar">
     <div class="logo">
-       <img 
+       <!-- <img 
         src="@/assets/image/logo.png" 
         alt="Logo" 
         style="width: 28px; height: 28px;"
-      />
+      /> -->
       Second Chance Market
     </div>
 
@@ -15,11 +15,11 @@
       <a href="#cara-kerja">Panduan</a>
 
       <a href="#" @click.prevent="goToMarket" class="btn-masuk">
-         <img 
+         <!-- <img 
         src="@/assets/image/logo.png" 
         alt="Logo" 
         style="width: 15px; height: 15px;"
-      />
+      /> -->
         Masuk Marketplace
       </a>
     </div>
@@ -33,7 +33,7 @@ export default {
   methods: {
     goToMarket() {
       alert(
-        "✨ Menuju ke Marketplace Second Chance Market ✨\n(Dalam implementasi nyata, ini akan membuka halaman utama marketplace dengan semua fitur: Posting, Chat, Wishlist, Bundling, Titip Jual)"
+        "Menuju ke Marketplace Second Chance Market \n(Dalam implementasi nyata, ini akan membuka halaman utama marketplace dengan semua fitur: Posting, Chat, Wishlist, Bundling, Titip Jual)"
       )
 
       window.open("#", "_self")

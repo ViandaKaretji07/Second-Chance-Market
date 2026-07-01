@@ -1,16 +1,8 @@
 <template>
   <div class="hero">
     <div class="hero-left animate-left">
-      <div class="typing-badge">
-         <img 
-        src="@/assets/image/logo.png" 
-        alt="Logo" 
-        style="width: 15px; height: 15px;"
-      />
-        Marketplace Kampus #1
-      </div>
 
-      <h1>"Barang bekasmu bukan sekadar sisa, tapi <span class="highlight">peluang baru!</span>"</h1>
+      <h1>Barang bekasmu bukan sekadar sisa, tapi <span class="highlight">peluang baru!</span></h1>
         <!-- INTEREST (I) dimasukkan di sini sebagai sub-pesan yang kuat -->
         <p><span class="highlight-interest"> Bayangkan betapa mudahnya menjual atau membeli barang bekas yang masih layak pakai, khususnya bagi mahasiswa rantau.</span> Dengan Second Chance Market, kamu bisa menemukan meja belajar, kasur, hingga peralatan dapur dengan harga ramah kantong, langsung dari sesama mahasiswa.</p>
 
@@ -26,9 +18,9 @@
     </div>
 
     <div class="hero-right animate-up">
-      <div style="background: #bdd9cf; border-radius: 48px; padding: 12px;">
+      <div style=" border-radius: 48px; padding: 12px;">
         <img
-          src="https://placehold.co/500x400/e0f0ea/2c7a5e?text=Second+Chance+Market"
+          src="@/assets/image/sicantik.jpg"
           alt="Marketplace Preview"
           style="border-radius: 40px; width:100%; height: auto;"
         >
@@ -58,3 +50,23 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+
+.hero-left h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.hero-left p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.btn-primary-landing,
+.btn-outline-landing {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+</style>
