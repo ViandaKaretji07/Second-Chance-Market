@@ -3,7 +3,6 @@
     <div class="section-title">
       Cara Kerja Second Chance Market
     </div>
-
     <div class="steps">
 
       <div class="step">
