@@ -1,53 +1,21 @@
 <template>
   <div class="how-it-works" id="cara-kerja">
     <div class="section-title">
-      Cara Kerja Second Chance Market
+      {{ content.howItWorks.sectionTitle }}
     </div>
 
     <div class="steps">
 
-      <div class="step">
-        <div class="step-number">1</div>
+      <div
+        v-for="(step, index) in content.howItWorks.steps"
+        :key="index"
+        class="step"
+      >
+        <div class="step-number">{{ index + 1 }}</div>
 
-        <h3>Posting Barang</h3>
+        <h3>{{ step.title }}</h3>
 
-        <p>
-          Upload barang bekasmu lengkap dengan
-          harga dan kategori.
-        </p>
-      </div>
-
-      <div class="step">
-        <div class="step-number">2</div>
-
-        <h3>Negosiasi & Chat</h3>
-
-        <p>
-          Pembeli menghubungi via chat internal
-          untuk tawar menawar.
-        </p>
-      </div>
-
-      <div class="step">
-        <div class="step-number">3</div>
-
-        <h3>Transaksi Aman</h3>
-
-        <p>
-          Kesepakatan harga,
-          barang diambil/dikirim (simulasi).
-        </p>
-      </div>
-
-      <div class="step">
-        <div class="step-number">4</div>
-
-        <h3>Beri Rating</h3>
-
-        <p>
-          Bangun reputasi sebagai penjual terpercaya
-          di lingkungan kampus.
-        </p>
+        <p>{{ step.text }}</p>
       </div>
 
     </div>
@@ -55,8 +23,14 @@
 </template>
 
 <script>
+import { content } from '../composables/useSiteContent'
+
 export default {
   name: 'HowItWorks',
+
+  data() {
+    return { content }
+  },
 
   mounted() {
     const observer = new IntersectionObserver((entries) => {

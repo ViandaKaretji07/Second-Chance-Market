@@ -1,90 +1,26 @@
 <template>
   <div class="features" id="fitur">
     <div class="section-title">
-      Fitur Andalan untuk Warga
+      {{ content.features.sectionTitle }}
     </div>
       <div style="text-align: center; max-width: 800px; margin: -20px auto 40px auto; background: #eef5f2; padding: 18px 24px; border-radius: 48px;">
-        <strong style="color: #164c3b;">Tak perlu repot pindahan atau bingung menjual barang saat pulang kampung.</strong> 
-        Fitur unggulan <strong class="highlight">Titip Jual Saat Pulang</strong> dan sistem <strong>Pre-Order</strong> membuat proses jual-beli jadi lebih praktis, aman, dan sesuai kebutuhan mahasiswa. Hemat biaya, hemat waktu, sekaligus mendukung gaya hidup berkelanjutan.
-    </div>
+        <strong style="color: var(--text-mains);">{{ content.features.introBold }}</strong>
+        {{ content.features.introText }}
+      </div>
     <div class="feature-grid">
 
-      <div class="feature-card">
+      <div
+        v-for="(item, index) in content.features.items"
+        :key="index"
+        class="feature-card"
+      >
         <div class="feature-icon">
-          <i class="fas fa-box-open"></i>
-        </div>
-        
-        <h3>Post Barang + Kategori</h3>
-
-        <p>
-          Upload foto, deskripsi, harga, dan pilih kategori
-          (Elektronik, Furnitur, Buku, dll).
-        </p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fas fa-comment-dots"></i>
+          <i :class="item.icon"></i>
         </div>
 
-        <h3>Chat Penjual & Pembeli</h3>
+        <h3>{{ item.title }}</h3>
 
-        <p>
-          Komunikasi langsung, nego harga,
-          tanya kondisi barang secara realtime.
-        </p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fas fa-heart"></i>
-        </div>
-
-        <h3>Wishlist & Simpan Barang</h3>
-
-        <p>
-          Simpan barang incaran, akses kapan saja,
-          dan bandingkan harga.
-        </p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fas fa-plane-departure"></i>
-        </div>
-
-        <h3>Titip Jual Saat Pulang</h3>
-
-        <p>
-          Jadwalkan penjualan barang sebelum mudik,
-          buyer bisa pre-order!
-        </p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fas fa-cubes"></i>
-        </div>
-
-        <h3>Bundling "Paket Anak Kos"</h3>
-
-        <p>
-          Beli kasur + meja + lampu jadi satu paket,
-          lebih murah & praktis.
-        </p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fas fa-chart-line"></i>
-        </div>
-
-        <h3>Simulasi Marketplace</h3>
-
-        <p>
-          Platform pembelajaran interaktif
-          untuk memahami alur jual beli digital.
-        </p>
+        <p>{{ item.text }}</p>
       </div>
 
     </div>
@@ -92,8 +28,14 @@
 </template>
 
 <script>
+import { content } from '../composables/useSiteContent'
+
 export default {
   name: 'FeaturesSection',
+
+  data() {
+    return { content }
+  },
 
   mounted() {
     const observer = new IntersectionObserver((entries) => {

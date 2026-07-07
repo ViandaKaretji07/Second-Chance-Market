@@ -1,23 +1,28 @@
 <template>
   <footer>
     <p style="align-items: center; gap: 8px; margin: 0;">
-      <img 
-        src="@/assets/image/logo.png" 
-        alt="Logo" 
+      <img
+        :src="content.images.logo"
+        alt="Logo"
         style="width: 15px; height: 15px;"
       />
-      Second Chance Market — Edukasi Marketplace untuk Mahasiswa Indonesia
+      {{ content.footer.line1 }}
     </p>
 
     <p style="margin-top: 12px;">
-      🌱 Hijau, kolaboratif, dan hemat |
-      &copy; 2025 Simulasi Pembelajaran Informatika
+      {{ content.footer.line2 }}
     </p>
   </footer>
 </template>
 
 <script>
+import { content } from '../composables/useSiteContent'
+
 export default {
-  name: 'Footer'
+  name: 'Footer',
+
+  data() {
+    return { content }
+  }
 }
 </script>

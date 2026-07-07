@@ -1,34 +1,34 @@
 <template>
   <div class="navbar">
     <div class="logo">
-       <!-- <img 
-        src="@/assets/image/logo.png" 
-        alt="Logo" 
-        style="width: 28px; height: 28px;"
-      /> -->
-      Second Chance Market
+      {{ content.navbar.logoText }}
     </div>
 
     <div class="nav-links">
-      <a href="#">Beranda</a>
-      <a href="#fitur">Fitur</a>
-      <a href="#cara-kerja">Panduan</a>
+      <a
+        v-for="(item, index) in content.navbar.menu"
+        :key="index"
+        :href="item.href"
+      >
+        {{ item.label }}
+      </a>
 
       <a href="#" @click.prevent="goToMarket" class="btn-masuk">
-         <!-- <img 
-        src="@/assets/image/logo.png" 
-        alt="Logo" 
-        style="width: 15px; height: 15px;"
-      /> -->
-        Masuk Marketplace
+        {{ content.navbar.ctaText }}
       </a>
     </div>
   </div>
 </template>
 
 <script>
+import { content } from '../composables/useSiteContent'
+
 export default {
   name: 'Navbar',
+
+  data() {
+    return { content }
+  },
 
   methods: {
     goToMarket() {
